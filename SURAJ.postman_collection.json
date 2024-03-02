@@ -1,0 +1,1849 @@
+{
+	"info": {
+		"_postman_id": "fcbcbd3b-948e-498a-a561-e81dfba9616b",
+		"name": "SURAJ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31203615"
+	},
+	"item": [
+		{
+			"name": "ConsumerSync",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if the response status code is 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Log the entire response details\r",
+							"var fullResponse = {\r",
+							"    status: pm.response.code,\r",
+							"    body: pm.response.json(),\r",
+							"    headers: pm.response.headers\r",
+							"};\r",
+							"\r",
+							"console.log('Full Response:', JSON.stringify(fullResponse, null, 2));\r",
+							"\r",
+							"// You can also log specific values from the response JSON\r",
+							"console.log('Value 1:', pm.response.json().ConsumerSyncDTO.ConsumerId);\r",
+							"console.log('Value 2:', pm.response.json().ConsumerSyncDTO.InstallationNumber);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": \"908321187212\",\r\n    \"ServiceType\": \"0\",\r\n    \"InstallationNumber\": \"FZZ099\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"SectionID\": \"12233\",\r\n    \"ConsumerId\": \"108909023445\",\r\n    \"FeederCode\": \"FD502\",\r\n    \"DTCode\": \"DT11001\",\r\n    \"AreaType\": \"\",\r\n    \"MRUNumber\": \"JMY\",\r\n    \"RouteSequenceNumber\": \"\",\r\n    \"EffectiveFromDate\": \"2023-10-30T19:58:18.000\",\r\n    \"ConsumerName\": \"UAT testing FOR 3P\",\r\n    \"Address1\": \"ServicesUdaipur BIA\",\r\n    \"Address2\": \"\",\r\n    \"MobileNumber\": \"9462192316\",\r\n    \"EmailAddress\": \"V.Paliwal@securemeters.com\",\r\n    \"Category\": \"Domestic\",\r\n    \"CategoryCode\": \"KJ\",\r\n    \"MeteringVoltage\": \"\",\r\n    \"SupplyVoltage\": \"\",\r\n    \"NetMetering\": \"0\",\r\n    \"TOD\": \"0\",\r\n    \"MeterInstalled\": \"1\",\r\n    \"MeterNumber\": \"CS12\",\r\n    \"MeterMake\": \"HCL\",\r\n    \"MeterOwner\": \"0\",\r\n    \"MeterInstallationDate\": \"2023-10-30T19:58:18.000\",\r\n    \"MeterBodySealNo\": \"\",\r\n    \"MultiplyingFactor\": \"1\",\r\n    \"PreviousKWHReading\": \"0.532\",\r\n    \"PreviousKVAhReading\": \"0.532\",\r\n    \"PreviousKVARHReading\": \"\",\r\n    \"OperationalMode\": \"0\",\r\n    \"AccountStatus\": \"0\",\r\n    \"LastBillingDate\": \"2023-10-27T17:57:16.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": \"\",\r\n    \"Past12MonthAvgConsumptionKWH\": \"\",\r\n    \"LoadBasedECL\": \"1\",\r\n    \"EmergencyCreditLimit\": \"-700\",\r\n    \"MaxCreditLimit\": \"11000\",\r\n    \"LoadLimit\": \"\",\r\n    \"CurrentLimit\": \"\",\r\n    \"ContractDemand\": \"5\",\r\n    \"SanctionLoad\": \"4\",\r\n    \"ExternalCTRatio\": \"0\",\r\n    \"ExternalPTRatio\": \"0\",\r\n    \"MeterType\": \"1\",\r\n    \"PhaseType\": \"3\",\r\n    \"LoadType\": \"0\",\r\n    \"LoadUnit\": \"0\",\r\n    \"ConnectionType\": \"0\",\r\n    \"BillingFrequency\": \"0\",\r\n    \"PrivilegeGroup\": \"0\",\r\n    \"Latitude\": \"24.5112666\",\r\n    \"Longitude\": \"73.7551283\",\r\n    \"DivisionID\": \"122\",\r\n    \"SubDivisionID\": \"1223\",\r\n    \"PoleNo\": \"\",\r\n    \"PostalAddress\": \"\",\r\n    \"UrbanRuralAreaType\": \"0\",\r\n    \"CurrentDues\": \"\",\r\n    \"MeterReadNote\": \"\",\r\n    \"ReasonCode\": \"0\",\r\n    \"OldMeterConsumption\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.middleware:15083/api/amisp/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"middleware"
+					],
+					"port": "15083",
+					"path": [
+						"api",
+						"amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsumerSync Copy 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if the response status code is 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// Log the entire response body\r",
+							"console.log(pm.response.text());\r",
+							"\r",
+							"// You can also log specific values from the response JSON\r",
+							"console.log('Value 1:', pm.response.json().ConsumerId);\r",
+							"console.log('Value 2:', pm.response.json().InstallationNumber);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": \"908321187232\",\r\n    \"ServiceType\": \"0\",\r\n    \"InstallationNumber\": \"FZZ099\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"SectionID\": \"12233\",\r\n    \"ConsumerId\": \"10807128321\",\r\n    \"FeederCode\": \"FD502\",\r\n    \"DTCode\": \"DT11001\",\r\n    \"AreaType\": \"\",\r\n    \"MRUNumber\": \"JMY\",\r\n    \"RouteSequenceNumber\": \"\",\r\n    \"EffectiveFromDate\": \"2023-10-30T19:58:18.000\",\r\n    \"ConsumerName\": \"UAT testing FOR 3P\",\r\n    \"Address1\": \"ServicesUdaipur BIA\",\r\n    \"Address2\": \"\",\r\n    \"MobileNumber\": \"9462192316\",\r\n    \"EmailAddress\": \"V.Paliwal@securemeters.com\",\r\n    \"Category\": \"Domestic\",\r\n    \"CategoryCode\": \"KJ\",\r\n    \"MeteringVoltage\": \"\",\r\n    \"SupplyVoltage\": \"\",\r\n    \"NetMetering\": \"0\",\r\n    \"TOD\": \"0\",\r\n    \"MeterInstalled\": \"1\",\r\n    \"MeterNumber\": \"CS12\",\r\n    \"MeterMake\": \"HCL\",\r\n    \"MeterOwner\": \"0\",\r\n    \"MeterInstallationDate\": \"2023-10-30T19:58:18.000\",\r\n    \"MeterBodySealNo\": \"\",\r\n    \"MultiplyingFactor\": \"1\",\r\n    \"PreviousKWHReading\": \"0.532\",\r\n    \"PreviousKVAhReading\": \"0.532\",\r\n    \"PreviousKVARHReading\": \"\",\r\n    \"OperationalMode\": \"0\",\r\n    \"AccountStatus\": \"0\",\r\n    \"LastBillingDate\": \"2023-10-27T17:57:16.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": \"\",\r\n    \"Past12MonthAvgConsumptionKWH\": \"\",\r\n    \"LoadBasedECL\": \"1\",\r\n    \"EmergencyCreditLimit\": \"-700\",\r\n    \"MaxCreditLimit\": \"11000\",\r\n    \"LoadLimit\": \"\",\r\n    \"CurrentLimit\": \"\",\r\n    \"ContractDemand\": \"5\",\r\n    \"SanctionLoad\": \"4\",\r\n    \"ExternalCTRatio\": \"0\",\r\n    \"ExternalPTRatio\": \"0\",\r\n    \"MeterType\": \"1\",\r\n    \"PhaseType\": \"3\",\r\n    \"LoadType\": \"0\",\r\n    \"LoadUnit\": \"0\",\r\n    \"ConnectionType\": \"0\",\r\n    \"BillingFrequency\": \"0\",\r\n    \"PrivilegeGroup\": \"0\",\r\n    \"Latitude\": \"24.5112666\",\r\n    \"Longitude\": \"73.7551283\",\r\n    \"DivisionID\": \"122\",\r\n    \"SubDivisionID\": \"1223\",\r\n    \"PoleNo\": \"\",\r\n    \"PostalAddress\": \"\",\r\n    \"UrbanRuralAreaType\": \"0\",\r\n    \"CurrentDues\": \"\",\r\n    \"MeterReadNote\": \"\",\r\n    \"ReasonCode\": \"0\",\r\n    \"OldMeterConsumption\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.middleware:15083/api/amisp/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"middleware"
+					],
+					"port": "15083",
+					"path": [
+						"api",
+						"amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsumerSync Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Test for Status Code:\r",
+							"// Check if the response status code is 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// Log the entire response body\r",
+							"console.log(pm.response.text());\r",
+							"\r",
+							"// You can also log specific values from the response JSON ( here select any two parameters which normally found in response body )\r",
+							"console.log('Value 1:', pm.response.json().ConsumerId);\r",
+							"console.log('Value 2:', pm.response.json().InstallationNumber);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": \"908321187232\",\r\n    \"ServiceType\": \"0\",\r\n    \"InstallationNumber\": \"FZZ099\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"SectionID\": \"12233\",\r\n    \"ConsumerId\": \"10807123890\",\r\n    \"FeederCode\": \"FD502\",\r\n    \"DTCode\": \"DT11001\",\r\n    \"AreaType\": \"\",\r\n    \"MRUNumber\": \"JMY\",\r\n    \"RouteSequenceNumber\": \"\",\r\n    \"EffectiveFromDate\": \"2023-10-30T19:58:18.000\",\r\n    \"ConsumerName\": \"UAT testing FOR 3P\",\r\n    \"Address1\": \"ServicesUdaipur BIA\",\r\n    \"Address2\": \"\",\r\n    \"MobileNumber\": \"9462192316\",\r\n    \"EmailAddress\": \"V.Paliwal@securemeters.com\",\r\n    \"Category\": \"Domestic\",\r\n    \"CategoryCode\": \"KJ\",\r\n    \"MeteringVoltage\": \"\",\r\n    \"SupplyVoltage\": \"\",\r\n    \"NetMetering\": \"0\",\r\n    \"TOD\": \"0\",\r\n    \"MeterInstalled\": \"1\",\r\n    \"MeterNumber\": \"CS12\",\r\n    \"MeterMake\": \"HCL\",\r\n    \"MeterOwner\": \"0\",\r\n    \"MeterInstallationDate\": \"2023-10-30T19:58:18.000\",\r\n    \"MeterBodySealNo\": \"\",\r\n    \"MultiplyingFactor\": \"1\",\r\n    \"PreviousKWHReading\": \"0.532\",\r\n    \"PreviousKVAhReading\": \"0.532\",\r\n    \"PreviousKVARHReading\": \"\",\r\n    \"OperationalMode\": \"0\",\r\n    \"AccountStatus\": \"0\",\r\n    \"LastBillingDate\": \"2023-10-27T17:57:16.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": \"\",\r\n    \"Past12MonthAvgConsumptionKWH\": \"\",\r\n    \"LoadBasedECL\": \"1\",\r\n    \"EmergencyCreditLimit\": \"-700\",\r\n    \"MaxCreditLimit\": \"11000\",\r\n    \"LoadLimit\": \"\",\r\n    \"CurrentLimit\": \"\",\r\n    \"ContractDemand\": \"5\",\r\n    \"SanctionLoad\": \"4\",\r\n    \"ExternalCTRatio\": \"0\",\r\n    \"ExternalPTRatio\": \"0\",\r\n    \"MeterType\": \"1\",\r\n    \"PhaseType\": \"3\",\r\n    \"LoadType\": \"0\",\r\n    \"LoadUnit\": \"0\",\r\n    \"ConnectionType\": \"0\",\r\n    \"BillingFrequency\": \"0\",\r\n    \"PrivilegeGroup\": \"0\",\r\n    \"Latitude\": \"24.5112666\",\r\n    \"Longitude\": \"73.7551283\",\r\n    \"DivisionID\": \"122\",\r\n    \"SubDivisionID\": \"1223\",\r\n    \"PoleNo\": \"\",\r\n    \"PostalAddress\": \"\",\r\n    \"UrbanRuralAreaType\": \"0\",\r\n    \"CurrentDues\": \"\",\r\n    \"MeterReadNote\": \"\",\r\n    \"ReasonCode\": \"0\",\r\n    \"OldMeterConsumption\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MR",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ReplaceMeter",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": \"2030499911589\",\r\n    \"InstallationNumber\": \"INST8905\",\r\n    \"ReplacementReason\": 5,\r\n    \"ConsumerId\": \"98998899005\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"MeterReadNote\": 0,\r\n    \"MRMode\": 0,\r\n    \"CurrentMeterNumber\": \"SS21491041\",\r\n    \"NewMeterType\": 0,\r\n    \"NewMeterOperationMode\": 0,\r\n    \"NewMeterPhaseType\": 1,\r\n    \"NewMeterCategoryCode\": \"KJ\",\r\n    \"NewSanctionLoad\": 6,\r\n    \"LoadUnit\": 0,\r\n    \"Remarks\": \"No\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsumerSync LTCT meter",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \"RequestID\": 8265040,\r\n   \"ServiceType\": 1,\r\n   \"InstallationNumber\": 8265040,\r\n   \"UtilityCode\": \"NBPD\",\r\n   \"DivisionID\": 122,\r\n   \"SubDivisionID\": 1223,\r\n   \"SectionID\": 12233,\r\n   \"FeederCode\": null,\r\n   \"DTCode\": null,\r\n   \"AreaType\": null,\r\n   \"UrbanRuralAreaType\": 0,\r\n   \"MRUNumber\": \"MRU82129\",\r\n   \"RouteSequenceNumber\": null,\r\n   \"ConsumerId\": 826500140,\r\n   \"EffectiveFromDate\": null,\r\n   \"ConsumerName\": \"Ashish Kr\",\r\n   \"Address1\": \"Services Udaipur\",\r\n   \"Address2\": null,\r\n   \"MobileNumber\": 8265979589,\r\n   \"EmailAddress\": \"ashish.baghel@securemeters.com\",\r\n   \"Category\": \"Domestic\",\r\n   \"CategoryCode\": \"DS1D\",\r\n   \"MeteringVoltage\": null,\r\n   \"SupplyVoltage\": null,\r\n   \"NetMetering\": 0,\r\n   \"TOD\": 0,\r\n   \"MeterInstalled\": 1,\r\n   \"MeterNumber\": \"MTR00140\",\r\n   \"MeterMake\": null,\r\n   \"MeterOwner\": 0,\r\n   \"MeterInstallationDate\": null,\r\n   \"MeterBodySealNo\": null,\r\n   \"MultiplyingFactor\": null,\r\n   \"PreviousKWHReading\": 21,\r\n   \"PreviousKVAhReading\": null,\r\n   \"PreviousKVARHReading\": null,\r\n   \"OperationalMode\": 0,\r\n   \"AccountStatus\": 0,\r\n   \"LastBillingDate\": null,\r\n   \"Past6MonthAvgConsumptionKWH\": null,\r\n   \"Past12MonthAvgConsumptionKWH\": null,\r\n   \"LoadBasedECL\": 0,\r\n   \"EmergencyCreditLimit\": null,\r\n   \"MaxCreditLimit\": null,\r\n   \"LoadLimit\": null,\r\n   \"CurrentLimit\": null,\r\n   \"ContractDemand\": 5,\r\n   \"SanctionLoad\": 5,\r\n   \"ExternalCTRatio\": 0,\r\n   \"ExternalPTRatio\": 0,\r\n   \"MeterType\": 0,\r\n   \"PhaseType\": 0,\r\n   \"LoadType\": 0,\r\n   \"LoadUnit\": 0,\r\n   \"ConnectionType\": 0,\r\n   \"BillingFrequency\": 0,\r\n   \"PrivilegeGroup\": 0,\r\n   \"Latitude\": null,\r\n   \"Longitude\": null,\r\n   \"PollNo\": null,\r\n   \"PostalAddress\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NMI",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "NewMeterInstallation",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 20002023000008,\r\n    \"InstallationNumber\": \"Installnmi08\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"SubDivisionID\": 1413,\r\n    \"SectionID\": 14131,\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 1,\r\n    \"ConsumerId\": 112100004356,\r\n    \"NscMode\": 0,\r\n    \"ConsumerName\": \"SAT0008\",\r\n    \"Address1\": \"VILL-BHANSPATTI ,TOLA-BHANSPATTI PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\":8696956984,\r\n    \"EmailAddress\":null,\r\n    \"Category\": \"Domestic\",\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"MeteringVoltage\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": null,\r\n    \"ConnectionType\": 0,\r\n    \"MeterOwner\": null,\r\n    \"OperationalMode\": 0,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 5,\r\n    \"SanctionLoad\": 5,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\":1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"BillingFrequency\": null,\r\n    \"FeederCode\": null,\r\n    \"DTCode\": null,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"Remarks\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.middleware:15083/api/amisp/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"middleware"
+					],
+					"port": "15083",
+					"path": [
+						"api",
+						"amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "118401314391",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 2000230105079000111,\r\n    \"ConsumerId\": \"118401314391\",\r\n    \"ServiceType\": 1,\r\n    \"InstallationNumber\": \"MOTI-2626300002\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 118,\r\n    \"SubDivisionID\": 1184,\r\n    \"SectionID\": 11842,\r\n    \"FeederCode\": \"F530\",\r\n    \"DTCode\": \"1020151-SRI\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"MIT-1020151\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": \"1990-01-01T12:00:00.000\",\r\n    \"ConsumerName\": \"SMT.BASANTI DEVI  \",\r\n    \"Address1\": \"SRI RAM NAGAR,PLOT-,MIT,MUZAFFARPUR MUZAFFARPUR MIT\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": \"9199408372\",\r\n    \"EmailAddress\": null,\r\n    \"Category\": null,\r\n    \"CategoryCode\": \"DS2D\",\r\n    \"MeteringVoltage\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"318021\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": 1.0,\r\n    \"PreviousKWHReading\": 24442.0,\r\n    \"PreviousKVAhReading\": 24442.0,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-09-01T02:35:11.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": null,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 2.0,\r\n    \"SanctionLoad\": 2.0,\r\n    \"ExternalCTRatio\": null,\r\n    \"ExternalPTRatio\": null,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 1,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": \"26.14566696\",\r\n    \"Longitude\": \"85.37129766\",\r\n    \"CurrentDues\": 1273.28,\r\n    \"OldMeterConsumption\": 0.0,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "118401314391 Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 200023010010012,\r\n    \"ConsumerId\": \"212100000004\",\r\n    \"ServiceType\": 1,\r\n    \"InstallationNumber\": \"Installnmi04\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\":141,\r\n    \"SubDivisionID\": 1413,\r\n    \"SectionID\": 14131,\r\n    \"FeederCode\": \"FD422\",\r\n    \"DTCode\": \"DT09001\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"3 PH CHAKIA\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": \"04/05/2023 13:28:20\",\r\n    \"ConsumerName\": \"SAT0004\",\r\n    \"Address1\": \"VILL-BHANSPATTI ,TOLA-BHANSPATTI PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": \"8826181331\",\r\n    \"EmailAddress\": \"Kushal.singh@securemeters.com\",\r\n    \"Category\":\"DOMESTIC\",\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"MeteringVoltage\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"SS21442648\",\r\n    \"MeterMake\": \"Secure\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": \"04/05/2023 13:28:20\",\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": 1,\r\n    \"PreviousKWHReading\": 1.748,\r\n    \"PreviousKVAhReading\": 1.748,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-09-01T02:35:11.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": null,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 4,\r\n    \"SanctionLoad\": 7,\r\n    \"ExternalCTRatio\": null,\r\n    \"ExternalPTRatio\": null,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": \"26.14566696\",\r\n    \"Longitude\": \"85.37129766\",\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "181800000801",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 200020432318001,\r\n    \"ServiceType\": 1,\r\n    \"ConsumerId\": \"181800000801\",\r\n    \"ConsumerName\": \"MMR ThreeP\",\r\n    \"InstallationNumber\": \"Install801\",\r\n    \"MeterNumber\": \"SS21442619\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 128,\r\n    \"SubDivisionID\": 1281,\r\n    \"SectionID\": 12811,\r\n    \"FeederCode\": \"FD422\",\r\n    \"DTCode\": \"DT09001\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"ADIYA\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": \"2023-03-02T15:25:37.000\",\r\n    \"Address1\": \"VILL-BHANSPATTI ,TOLA-BHANSPATTI PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": \"8826177944\",\r\n    \"EmailAddress\": null,\r\n    \"Category\": \"DOMESTIC\",\r\n    \"CategoryCode\": \"LTIS1D\",\r\n    \"MeteringVoltage\": 0,\r\n    \"SupplyVoltage\": 0,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 0,\r\n    \"MeterMake\": \"Secure\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": \"2023-03-02T15:25:37.000\",\r\n    \"MeterBodySealNo\": 15,\r\n    \"MultiplyingFactor\": 1,\r\n    \"PreviousKWHReading\": null,\r\n    \"PreviousKVAhReading\": 5000,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-26T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": 90,\r\n    \"CurrentLimit\": 125,\r\n    \"ContractDemand\": 12,\r\n    \"SanctionLoad\": 12,\r\n    \"ExternalCTRatio\": 0,\r\n    \"ExternalPTRatio\": 6,\r\n    \"MeterType\": 1,\r\n    \"PhaseType\": 3,\r\n    \"LoadType\": 1,\r\n    \"LoadUnit\": 1,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null,\r\n    \"MeterReadNote\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "181800000801 Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 2000204313231088001,\r\n    \"ServiceType\": 0,\r\n    \"ConsumerId\": \"181800000801\",\r\n    \"ConsumerName\": \"MMR ThreeP\",\r\n    \"InstallationNumber\": \"Install801\",\r\n    \"MeterNumber\": \"METER0801\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 128,\r\n    \"SubDivisionID\": 1281,\r\n    \"SectionID\": 12811,\r\n    \"FeederCode\": \"F891\",\r\n    \"DTCode\": null,\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"ADIYA\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": \"2022-11-26T12:00:00.000\",\r\n    \"Address1\": \"VILL-BHANSPATTI ,TOLA-BHANSPATTI PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": \"8826177955\",\r\n    \"EmailAddress\": null,\r\n    \"Category\": \"DOMESTIC\",\r\n    \"CategoryCode\": \"LTIS1D\",\r\n    \"MeteringVoltage\": 0,\r\n    \"SupplyVoltage\": 0,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 0,\r\n    \"MeterMake\": null,\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": 1,\r\n    \"PreviousKWHReading\": 5000,\r\n    \"PreviousKVAhReading\": 5000,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-26T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 12,\r\n    \"SanctionLoad\": 12,\r\n    \"ExternalCTRatio\": 0,\r\n    \"ExternalPTRatio\": 0,\r\n    \"MeterType\": 1,\r\n    \"PhaseType\": 3,\r\n    \"LoadType\": 1,\r\n    \"LoadUnit\": 1,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null,\r\n    \"MeterReadNote\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsumerSync_V005.7",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 2000230505050000001,\r\n    \"ConsumerId\": \"212100000001\",\r\n    \"ServiceType\": 0,\r\n    \"InstallationNumber\": \"Install-00001\",\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 118,\r\n    \"SubDivisionID\": 1184,\r\n    \"SectionID\": 11842,\r\n    \"FeederCode\": \"F530\",\r\n    \"DTCode\": \"1020151-SRI\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"MIT-1020151\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": \"1990-01-01T12:00:00.000\",\r\n    \"ConsumerName\": \"SAT0001\",\r\n    \"Address1\": \"SRI RAM NAGAR,PLOT-,MIT,MUZAFFARPUR MUZAFFARPUR MIT\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": \"8826177944\",\r\n    \"EmailAddress\": null,\r\n    \"Category\":\"Domestic\",\r\n    \"CategoryCode\": \"DS2D\",\r\n    \"MeteringVoltage\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"MSN00001\",\r\n    \"MeterMake\": \"OTHER\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": 1,\r\n    \"PreviousKWHReading\": 2500,\r\n    \"PreviousKVAhReading\": 2500,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-09-01T02:35:11.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": null,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 4,\r\n    \"SanctionLoad\": 4,\r\n    \"ExternalCTRatio\": null,\r\n    \"ExternalPTRatio\": null,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 200020421123,\r\n    \"ConsumerId\": 11200000034,\r\n    \"InstallationNumber\": \"INSTALL0034\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 122,\r\n    \"SubDivisionID\": 1224,\r\n    \"SectionID\": 12243,\r\n    \"FeederCode\": \"F891\",\r\n    \"DTCode\": null,\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"BEL/VIK\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": null,\r\n    \"ConsumerName\": \"TEST HP2\",\r\n    \"Address1\": \"VILL-BHANSPATTI ,TOLA-BHANSPATTI PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": \"9199228322\",\r\n    \"EmailAddress\": null,\r\n    \"Category\": \"WATER/SEWAGE\",\r\n    \"CategoryCode\": \"HGN\",\r\n    \"MeteringVoltage\": 0,\r\n    \"SupplyVoltage\": 0,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"METER002HP\",\r\n    \"MeterMake\": null,\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": 1,\r\n    \"PreviousKWHReading\": 50,\r\n    \"PreviousKVAhReading\": 50,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-26T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 18,\r\n    \"SanctionLoad\": 18,\r\n    \"ExternalCTRatio\": 0,\r\n    \"ExternalPTRatio\": 0,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 2,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1P",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"RequestID\": 2000077251230000001,\r\n    \"ConsumerId\": 101500000801,\r\n    \"InstallationNumber\": \"INST-0000801\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 123,\r\n    \"SubDivisionID\": 1231,\r\n    \"SectionID\": 12311,\r\n    \"FeederCode\": \"F376\",\r\n    \"DTCode\": \"1030109-NAV\",\r\n    \"AreaType\":1,\r\n    \"UrbanRuralAreaType\": 1,\r\n    \"MRUNumber\": \"JAHAGIRPUR\",\r\n    \"RouteSequenceNumber\": \"RSN123\",\r\n    \"EffectiveFromDate\": \"2022-12-22T04:00:00.000\",\r\n    \"ConsumerName\": \"Sooraj oneP\",\r\n    \"Address1\": \"VILL-JAHAGIRPUR ,TOLA-JAHAGIRPUR PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": 8826177944,\r\n    \"EmailAddress\": null,\r\n    \"Category\": \"DOMESTIC\",\r\n    \"CategoryCode\": \"NDS2D\",\r\n    \"MeteringVoltage\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"NetMetering\": 0,\r\n    \"TOD\":0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"METER0000801\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": \"0\",\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": \"1\",\r\n    \"PreviousKWHReading\": 100,\r\n    \"PreviousKVAhReading\": null,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-24T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": null,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 5,\r\n    \"SanctionLoad\": 7,\r\n    \"ExternalCTRatio\": 0,\r\n    \"ExternalPTRatio\": 0,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 1,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"PoleNo\": null,\r\n    \"PostalAddress\": null,\r\n    \"MeterReadNote\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1P_kVA",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"RequestID\": 2000077251230000004,\r\n    \"ConsumerId\": 101500000804,\r\n    \"InstallationNumber\": \"INST-0000804\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 123,\r\n    \"SubDivisionID\": 1231,\r\n    \"SectionID\": 12311,\r\n    \"FeederCode\": \"F376\",\r\n    \"DTCode\": \"1030109-NAV\",\r\n    \"AreaType\":1,\r\n    \"UrbanRuralAreaType\": 1,\r\n    \"MRUNumber\": \"JAHAGIRPUR\",\r\n    \"RouteSequenceNumber\": \"RSN123\",\r\n    \"EffectiveFromDate\": \"2022-12-22T04:00:00.000\",\r\n    \"ConsumerName\": \"Sooraj B oneP\",\r\n    \"Address1\": \"VILL-JAHAGIRPUR ,TOLA-JAHAGIRPUR PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": 8826177944,\r\n    \"EmailAddress\": null,\r\n    \"Category\": null,\r\n    \"CategoryCode\": \"LTIS1D\",\r\n    \"MeteringVoltage\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"NetMetering\": 0,\r\n    \"TOD\":0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"METER0000804\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": \"0\",\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": \"1\",\r\n    \"PreviousKWHReading\": 1000,\r\n    \"PreviousKVAhReading\": 1000,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-24T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": null,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 10,\r\n    \"SanctionLoad\": 10,\r\n    \"ExternalCTRatio\": 0,\r\n    \"ExternalPTRatio\": 0,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"PoleNo\": null,\r\n    \"PostalAddress\": null,\r\n    \"MeterReadNote\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1P_A",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"RequestID\": 2000077251230000002,\r\n    \"ConsumerId\": 101500000802,\r\n    \"InstallationNumber\": \"INST-0000802\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 123,\r\n    \"SubDivisionID\": 1231,\r\n    \"SectionID\": 12311,\r\n    \"FeederCode\": \"F376\",\r\n    \"DTCode\": \"1030109-NAV\",\r\n    \"AreaType\":1,\r\n    \"UrbanRuralAreaType\": 1,\r\n    \"MRUNumber\": \"JAHAGIRPUR\",\r\n    \"RouteSequenceNumber\": \"RSN123\",\r\n    \"EffectiveFromDate\": \"2022-12-22T04:00:00.000\",\r\n    \"ConsumerName\": \"Sooraj oneP\",\r\n    \"Address1\": \"VILL-JAHAGIRPUR ,TOLA-JAHAGIRPUR PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": 8826177944,\r\n    \"EmailAddress\": null,\r\n    \"Category\": \"DOMESTIC\",\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"MeteringVoltage\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"NetMetering\": 0,\r\n    \"TOD\":0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"METER0000802\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": \"0\",\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": \"1\",\r\n    \"PreviousKWHReading\": 100,\r\n    \"PreviousKVAhReading\": null,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-24T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": null,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 5,\r\n    \"SanctionLoad\": 5,\r\n    \"ExternalCTRatio\": 0,\r\n    \"ExternalPTRatio\": 0,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"PoleNo\": null,\r\n    \"PostalAddress\": null,\r\n    \"MeterReadNote\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3P",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 2000077251230000007,\r\n    \"ConsumerId\": 101500000807,\r\n    \"InstallationNumber\": \"INST-0000807\",\r\n    \"ServiceType\": 1,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 123,\r\n    \"SubDivisionID\": 1231,\r\n    \"SectionID\": 12311,\r\n    \"FeederCode\": \"F891\",\r\n    \"DTCode\": \"1030109-NAV\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"JAHAGIRPUR\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": null,\r\n    \"ConsumerName\": \"Sooraj threeP\",\r\n    \"Address1\": \"VILL-JAHAGIRPUR ,TOLA-JAHAGIRPUR PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": 8826177999,\r\n    \"EmailAddress\": null,\r\n    \"Category\": \"DOMESTIC\",\r\n    \"CategoryCode\": \"LTIS1D\",\r\n    \"MeteringVoltage\": 0,\r\n    \"SupplyVoltage\": 0,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"METER0000807\",\r\n    \"MeterMake\": \"AXN\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": 1,\r\n    \"PreviousKWHReading\": 500,\r\n    \"PreviousKVAhReading\": 500,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-26T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": null,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 12,\r\n    \"SanctionLoad\": 10,\r\n    \"ExternalCTRatio\": 0,\r\n    \"ExternalPTRatio\": 0,\r\n    \"MeterType\": 1,\r\n    \"PhaseType\": 3,\r\n    \"LoadType\": 1,\r\n    \"LoadUnit\": 1,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ZZ_SAMPLE",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"RequestID\": 2000077251221000001,\r\n    \"ConsumerId\": 101500000601,\r\n    \"InstallationNumber\": \"INST-000001\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 123,\r\n    \"SubDivisionID\": 1231,\r\n    \"SectionID\": 12311,\r\n    \"FeederCode\": \"F376\",\r\n    \"DTCode\": \"1030109-NAV\",\r\n    \"AreaType\":1,\r\n    \"UrbanRuralAreaType\": 1,\r\n    \"MRUNumber\": \"JAHAGIRPUR\",\r\n    \"RouteSequenceNumber\": \"RSN123\",\r\n    \"EffectiveFromDate\": \"2022-12-22T04:00:00.000\",\r\n    \"ConsumerName\": \"Sooraj oneP\",\r\n    \"Address1\": \"VILL-JAHAGIRPUR ,TOLA-JAHAGIRPUR PANCH-RUNNI SAIDPUR DAKSHINI ,BLOCK-RUNISAIDPUR DIST-SITAMARHI\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": 8826177944,\r\n    \"EmailAddress\": null,\r\n    \"Category\": \"DOMESTIC\",\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"MeteringVoltage\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"NetMetering\": 0,\r\n    \"TOD\":0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"METER0000001\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": \"0\",\r\n    \"MeterInstallationDate\": null,\r\n    \"MeterBodySealNo\": null,\r\n    \"MultiplyingFactor\": \"1\",\r\n    \"PreviousKWHReading\": 100,\r\n    \"PreviousKVAhReading\": null,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-24T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": null,\r\n    \"Past12MonthAvgConsumptionKWH\": null,\r\n    \"LoadBasedECL\": null,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 5,\r\n    \"SanctionLoad\": 5,\r\n    \"ExternalCTRatio\": 0,\r\n    \"ExternalPTRatio\": 0,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 0,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"PoleNo\": null,\r\n    \"PostalAddress\": null,\r\n    \"MeterReadNote\": null,\r\n    \"CurrentDues\": null,\r\n    \"OldMeterConsumption\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "100000001",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 2000077021222000000,\r\n    \"ConsumerId\": 100000001,\r\n    \"InstallationNumber\": \"1A\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 118,\r\n    \"SubDivisionID\": 1181,\r\n    \"SectionID\": 11811,\r\n    \"FeederCode\": null,\r\n    \"DTCode\": \"1020114\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"ASH-970000001\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": null,\r\n    \"ConsumerName\": \"Ashish Ashish\",\r\n    \"Address1\": \"Services Validation, PIA, Udaipur. Pin Code- 201301\",\r\n    \"Address2\": \"Integration Testing, Scada Bhawan, bihar. Pin Code- 201301\",\r\n    \"MobileNumber\": \"8265979589\",\r\n    \"EmailAddress\": \"ashish.baghel@securemeters.com\",\r\n    \"Category\": \"Domestic\",\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"MeteringVoltage\": 0,\r\n    \"SupplyVoltage\": 0,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"SS97197000\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": \"2022-11-24T18:05:03.002\",\r\n    \"MeterBodySealNo\": \"MBS123\",\r\n    \"MultiplyingFactor\": 1.0,\r\n    \"PreviousKWHReading\": 7941.0,\r\n    \"PreviousKVAhReading\": 7941.0,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-24T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": 1200,\r\n    \"Past12MonthAvgConsumptionKWH\": 1201,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 4.0,\r\n    \"SanctionLoad\": 4.0,\r\n    \"ExternalCTRatio\": null,\r\n    \"ExternalPTRatio\": null,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 1,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": 21.9876,\r\n    \"Longitude\": 32.9898,\r\n    \"CurrentDues\": 1832.12,\r\n    \"OldMeterConsumption\": 0.0,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "100000002",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 2000077021222000001,\r\n    \"ConsumerId\": 100000002,\r\n    \"InstallationNumber\": \"1A\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 118,\r\n    \"SubDivisionID\": 1181,\r\n    \"SectionID\": 11811,\r\n    \"FeederCode\": null,\r\n    \"DTCode\": \"1020114\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"ASH-970000001\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": null,\r\n    \"ConsumerName\": \"Ashish Ashish\",\r\n    \"Address1\": \"Services Validation, PIA, Udaipur. Pin Code- 201301\",\r\n    \"Address2\": \"Integration Testing, Scada Bhawan, bihar. Pin Code- 201301\",\r\n    \"MobileNumber\": \"8265979589\",\r\n    \"EmailAddress\": \"ashish.baghel@securemeters.com\",\r\n    \"Category\": \"Domestic\",\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"MeteringVoltage\": 0,\r\n    \"SupplyVoltage\": 0,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"SS97197000\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": \"2022-11-24T18:05:03.002\",\r\n    \"MeterBodySealNo\": \"MBS123\",\r\n    \"MultiplyingFactor\": 1.0,\r\n    \"PreviousKWHReading\": 7941.0,\r\n    \"PreviousKVAhReading\": 7941.0,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-24T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": 1200,\r\n    \"Past12MonthAvgConsumptionKWH\": 1201,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 4.0,\r\n    \"SanctionLoad\": 4.0,\r\n    \"ExternalCTRatio\": null,\r\n    \"ExternalPTRatio\": null,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 1,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": 21.9876,\r\n    \"Longitude\": 32.9898,\r\n    \"CurrentDues\": 1832.12,\r\n    \"OldMeterConsumption\": 0.0,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1000000000",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 2000077021222000001,\r\n    \"ConsumerId\": 100000002,\r\n    \"InstallationNumber\": \"1A\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 118,\r\n    \"SubDivisionID\": 1181,\r\n    \"SectionID\": 11811,\r\n    \"FeederCode\": null,\r\n    \"DTCode\": \"1020114\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"ASH-970000001\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": null,\r\n    \"ConsumerName\": \"Ashish Ashish\",\r\n    \"Address1\": \"Services Validation, PIA, Udaipur. Pin Code- 201301\",\r\n    \"Address2\": \"Integration Testing, Scada Bhawan, bihar. Pin Code- 201301\",\r\n    \"MobileNumber\": \"8265979589\",\r\n    \"EmailAddress\": \"ashish.baghel@securemeters.com\",\r\n    \"Category\": \"Domestic\",\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"MeteringVoltage\": 0,\r\n    \"SupplyVoltage\": 0,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"SS97197000\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": \"2022-11-24T18:05:03.002\",\r\n    \"MeterBodySealNo\": \"MBS123\",\r\n    \"MultiplyingFactor\": 1.0,\r\n    \"PreviousKWHReading\": 7941.0,\r\n    \"PreviousKVAhReading\": 7941.0,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-24T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": 1200,\r\n    \"Past12MonthAvgConsumptionKWH\": 1201,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 4.0,\r\n    \"SanctionLoad\": 4.0,\r\n    \"ExternalCTRatio\": null,\r\n    \"ExternalPTRatio\": null,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 1,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": 21.9876,\r\n    \"Longitude\": 32.9898,\r\n    \"CurrentDues\": 1832.12,\r\n    \"OldMeterConsumption\": 0.0,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "100000000",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 2000077021222000000,\r\n    \"ConsumerId\": 100000000,\r\n    \"InstallationNumber\": \"1A\",\r\n    \"ServiceType\": 0,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"DivisionID\": 118,\r\n    \"SubDivisionID\": 1181,\r\n    \"SectionID\": 11811,\r\n    \"FeederCode\": null,\r\n    \"DTCode\": \"1020114\",\r\n    \"AreaType\": 1,\r\n    \"UrbanRuralAreaType\": 0,\r\n    \"MRUNumber\": \"ASH-970000001\",\r\n    \"RouteSequenceNumber\": null,\r\n    \"EffectiveFromDate\": null,\r\n    \"ConsumerName\": \"Ashish Ashish\",\r\n    \"Address1\": \"Services Validation, PIA, Udaipur. Pin Code- 201301\",\r\n    \"Address2\": \"Integration Testing, Scada Bhawan, bihar. Pin Code- 201301\",\r\n    \"MobileNumber\": \"8265979589\",\r\n    \"EmailAddress\": \"ashish.baghel@securemeters.com\",\r\n    \"Category\": \"Domestic\",\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"MeteringVoltage\": 0,\r\n    \"SupplyVoltage\": 0,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": 0,\r\n    \"MeterInstalled\": 1,\r\n    \"MeterNumber\": \"SS97197000\",\r\n    \"MeterMake\": \"N.A.\",\r\n    \"MeterOwner\": 0,\r\n    \"MeterInstallationDate\": \"2022-11-24T18:05:03.002\",\r\n    \"MeterBodySealNo\": \"MBS123\",\r\n    \"MultiplyingFactor\": 1.0,\r\n    \"PreviousKWHReading\": 7941.0,\r\n    \"PreviousKVAhReading\": 7941.0,\r\n    \"PreviousKVARHReading\": null,\r\n    \"OperationalMode\": 0,\r\n    \"AccountStatus\": 0,\r\n    \"LastBillingDate\": \"2022-11-24T12:00:00.000\",\r\n    \"Past6MonthAvgConsumptionKWH\": 1200,\r\n    \"Past12MonthAvgConsumptionKWH\": 1201,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"ContractDemand\": 4.0,\r\n    \"SanctionLoad\": 4.0,\r\n    \"ExternalCTRatio\": null,\r\n    \"ExternalPTRatio\": null,\r\n    \"MeterType\": 0,\r\n    \"PhaseType\": 1,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"ConnectionType\": 1,\r\n    \"BillingFrequency\": 0,\r\n    \"PrivilegeGroup\": 0,\r\n    \"Latitude\": 21.9876,\r\n    \"Longitude\": 32.9898,\r\n    \"CurrentDues\": 1832.12,\r\n    \"OldMeterConsumption\": 0.0,\r\n    \"PostalAddress\": null,\r\n    \"PoleNo\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsumerSync_Only mandatory parameters",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestedAction",
+						"value": "ConsumerSync",
+						"type": "default"
+					},
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \"RequestID\": 77371,\r\n   \"ServiceType\": 1,\r\n   \"InstallationNumber\": 77371,\r\n   \"UtilityCode\": \"NBPD\",\r\n   \"DivisionID\": 140,\r\n   \"SubDivisionID\": 1404,\r\n   \"SectionID\": 14041,\r\n   \"UrbanRuralAreaType\": 0,\r\n   \"MRUNumber\": \"MRU77371\",\r\n   \"ConsumerId\": 773734561,\r\n   \"ConsumerName\": \"Rajendra1P001\",\r\n   \"Address1\": \"Services Udaipur\",\r\n   \"MobileNumber\": 8265979589,\r\n   \"EmailAddress\": \"abc@securemeters.com\",\r\n   \"Category\": \"Domestic\",\r\n   \"CategoryCode\": \"DS1D\",\r\n   \"NetMetering\": 0,\r\n   \"TOD\": 0,\r\n   \"MeterInstalled\": 1,\r\n   \"MeterNumber\": \"MRJ1P001\",\r\n   \"MeterOwner\": 0,\r\n   \"PreviousKWHReading\": 101.11,\r\n   \"OperationalMode\": 0,\r\n   \"AccountStatus\": 0,\r\n   \"LoadBasedECL\": 0,\r\n   \"ContractDemand\": 5,\r\n   \"SanctionLoad\": 5,\r\n   \"ExternalCTRatio\": 0,\r\n   \"ExternalPTRatio\": 0,\r\n   \"MeterType\": 1,\r\n   \"PhaseType\": 1,\r\n   \"LoadType\": 0,\r\n   \"LoadUnit\": 0,\r\n   \"ConnectionType\": 0,\r\n   \"BillingFrequency\": 0,\r\n   \"PrivilegeGroup\": 0\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/Amisp/",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"Amisp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewMeterInstallation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "System@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MIDDLEUSER",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "UtilitySupplierCode",
+						"value": "NBPD",
+						"type": "default"
+					},
+					{
+						"key": "RequestedAction",
+						"value": "NewMeterInstallation",
+						"type": "default"
+					},
+					{
+						"key": "Host",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestID\": 88881,\r\n    \"InstallationNumber\": 888881,\r\n    \"UtilityCode\": \"NBPD\",\r\n    \"SubDivisionID\": 1181,\r\n    \"SectionID\": 11811,\r\n    \"AreaType\": 0,\r\n    \"ConsumerId\": 888888881,\r\n    \"NscMode\": 0,\r\n    \"ConsumerName\": \"Deepshikha Soni\",\r\n    \"Address1\": \"Pratapnagar\",\r\n    \"Address2\": null,\r\n    \"MobileNumber\": 8826177944,\r\n    \"EmailAddress\": null,\r\n    \"Category\": \"Domestic\",\r\n    \"ConnectionType\": 0,\r\n    \"OperationalMode\": 0,\r\n    \"LoadBasedECL\": 0,\r\n    \"EmergencyCreditLimit\": null,\r\n    \"MaxCreditLimit\": null,\r\n    \"MeterType\": 1,\r\n    \"PhaseType\": 3,\r\n    \"NetMetering\": 0,\r\n    \"TOD\": null,\r\n    \"SupplyVoltage\": null,\r\n    \"MeteringVoltage\": null,\r\n    \"LoadType\": 0,\r\n    \"LoadUnit\": 0,\r\n    \"CategoryCode\": \"DS1D\",\r\n    \"BillingFrequency\": null,\r\n    \"SanctionLoad\": 5,\r\n    \"ContractDemand\": 5,\r\n    \"LoadLimit\": null,\r\n    \"CurrentLimit\": null,\r\n    \"PrivilegeGroup\": 0,\r\n    \"MeterOwner\": null,\r\n    \"FeederCode\": null,\r\n    \"DTCode\": null\",\r\n    \"Latitude\": null,\r\n    \"Longitude\": null,\r\n    \"Remark\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.18.11.13:14443/api/amisp",
+					"protocol": "https",
+					"host": [
+						"172",
+						"18",
+						"11",
+						"13"
+					],
+					"port": "14443",
+					"path": [
+						"api",
+						"amisp"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "System@123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "MIDDLEUSER",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
