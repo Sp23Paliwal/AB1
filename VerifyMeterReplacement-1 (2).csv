@@ -1,0 +1,8 @@
+,OCR,Consumer number,MRU number,Meter number,Old meter phase,Tariff category,Replacement date-time,Validation remarks,Validation status,Rejection reason
+,,112300274409,AGH-1020088(A),EnergyEmporium,Single,DS1D,2024-02-19T17:21:03,Pass,Pending,Update image(s)
+,,112300274469,AGH-1020088(A),abba,Single,DS1D,2024-02-09T14:44:12,Pass,Passed,Image not clear
+,,112430021344,AGH-1020088(A),Dabba,Single,DS1D,2024-02-02T11:56:37,Pass,Passed,Image not clear
+,,90220241253,xyz1,Build21UFVT01,Single,KJ,2024-02-19T15:06:54,Pass,Passed,Letter is not valid
+,,987651200011,DHOLI,ASH3011,Single,DS1D,2024-02-09T10:55:47,Pass,Pending,Update image(s)
+,,987651200012,DHOLI,ASH3012,Single,DS1D,2024-02-09T10:58:06,Pass,Passed,Defective to ok
+,,987651200013,DHOLI,SOU3012,Single,DS1D,2024-02-12T11:28:06,Negative Consumption; New kwh cannot be lesser than old,Failed,Image not clear
